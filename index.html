@@ -1,123 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personajes de Dragon Ball</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #1a1a1a;
-      color: #fff;
-    }
-
-    header {
-      background: #ff6f00;
-      padding: 1rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-
-    .card {
-      background: #2a2a2a;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .card-content {
-      padding: 1rem;
-    }
-
-    .card-title {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #ff9800;
-    }
-
-    .card-desc {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-
-    .active {
-      background: #268a1f;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s ease;
-    }
-
-    .inactive {
-      background: #2a2a2a;
-      color: #ccc;
-    }
-
-  </style>
-  <script src="./api.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de selectores, eventos y creacion</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./functions.js"></script>
 </head>
 <body>
-  <header>
-    Personajes de Dragon Ball
-  </header>
-
-  <div class="container" id="main">
-    <!-- <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Goku_anime.png" alt="Goku">
-      <div class="card-content">
-        <div class="card-title">Goku</div>
-        <div class="card-desc">El protagonista principal, guerrero saiyajin con un corazón puro y una sed infinita por mejorar.</div>
-      </div>
+    <div class="tablero">
+        <div class="casilla" data-row="0" data-col="0"></div>
+        <div class="casilla" data-row="0" data-col="1"></div>
+        <div class="casilla" data-row="0" data-col="2"></div>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Vegeta_Dragon_Ball.png" alt="Vegeta">
-      <div class="card-content">
-        <div class="card-title">Vegeta</div>
-        <div class="card-desc">El orgulloso príncipe de los saiyajines, rival de Goku y uno de los guerreros más poderosos del universo.</div>
-      </div>
+    <div class="tablero">
+        <div class="casilla" data-row="1" data-col="0"></div>
+        <div class="casilla" data-row="1" data-col="1"></div>
+        <div class="casilla" data-row="1" data-col="2"></div>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/2/20/Piccolo_Dragon_Ball.png" alt="Piccolo">
-      <div class="card-content">
-        <div class="card-title">Piccolo</div>
-        <div class="card-desc">Un namekiano sabio y fuerte que pasó de enemigo a ser uno de los más valiosos aliados de Goku.</div>
-      </div>
+    <div class="tablero">
+        <div class="casilla" data-row="2" data-col="0"></div>
+        <div class="casilla" data-row="2" data-col="1"></div>
+        <div class="casilla" data-row="2" data-col="2"></div>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/Gohan_Dragon_Ball.png" alt="Gohan">
-      <div class="card-content">
-        <div class="card-title">Gohan</div>
-        <div class="card-desc">Hijo de Goku, con un gran potencial oculto. Ha salvado al mundo más de una vez.</div>
-      </div>
+    <div class="tablero">
+        <button id="btnReset">Reiniciar el juego</button>
     </div>
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/Gohan_Dragon_Ball.png" alt="Gohan">
-      <div class="card-content">
-        <div class="card-title">Bulma</div>
-        <div class="card-desc">Hijo de Goku, con un gran potencial oculto. Ha salvado al mundo más de una vez.</div>
-      </div>
+    <!-- <div class="tablero">
+        <div>El jugador X ha ganado con la movida diagonal</div>
     </div> -->
-  </div>
 </body>
 </html>
