@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uso de selectores, eventos y creacion</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./functions.js"></script>
+    <title>Formularios</title>
+    <script src="./form.js"></script>
 </head>
 <body>
-    <div class="tablero">
-        <div class="casilla" data-row="0" data-col="0"></div>
-        <div class="casilla" data-row="0" data-col="1"></div>
-        <div class="casilla" data-row="0" data-col="2"></div>
-    </div>
-    <div class="tablero">
-        <div class="casilla" data-row="1" data-col="0"></div>
-        <div class="casilla" data-row="1" data-col="1"></div>
-        <div class="casilla" data-row="1" data-col="2"></div>
-    </div>
-    <div class="tablero">
-        <div class="casilla" data-row="2" data-col="0"></div>
-        <div class="casilla" data-row="2" data-col="1"></div>
-        <div class="casilla" data-row="2" data-col="2"></div>
-    </div>
-    <div class="tablero">
-        <button id="btnReset">Reiniciar el juego</button>
-    </div>
-    <!-- <div class="tablero">
-        <div>El jugador X ha ganado con la movida diagonal</div>
-    </div> -->
+    <h1>Formularios</h1>
+
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Aqui ira el nombre"/><br/>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Aqui ira el apellido"/><br/>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Aqui ira el password"/><br/>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Aqui ira el email"/><br/>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name="telefono" id="telefono" placeholder="Aqui ira el telefono"/><br/>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" placeholder="Aqui ira la fecha"/><br/>
+
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora" placeholder="Aqui ira la hora"/><br/>
+
+        <label for="color">Color:</label>
+        <input type="color" name="color" id="color" placeholder="Aqui ira el color"/><br/>
+
+        <label for="url">Tiene Hijos?</label></br>
+        <input type="radio" name="hijos" id="si" value="SI"/> <label>SI</label><br/>
+        <input type="radio" name="hijos" id="no" value="NO"/> <label>NO</label><br/>
+
+        <!-- Si tiene hijos tiene que habilitarse una seccion de texto, siempre y cuando sea SI -->
+         <!-- <textarea name="hijos" id="hijos" placeholder="Aqui ira el texto"></textarea><br/> -->
+
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Borrar" />
+    </form>
+    <button id="boton">Enviar desde boton normal</button>
+    <div id="errores"></div>
 </body>
 </html>
