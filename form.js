@@ -15,8 +15,18 @@ const sendData = async (url, data) => {
 
     const person = {
         name: 'Adrian',
-        email: 'test@test.cl'
+        email: 'test@test.cl',
+        lastName: 'López',
+        age: 30,
+        address: {
+            street: 'Calle Falsa',
+            number: 123
+        },
+        hobbies: ['programar', 'leer', 'jugar'],
+        isActive: true
       };
+
+    const { name, ...restoDeAtributos } = person;
       
 
     if (person && person.lastName && person.lastName.length > 0) {
